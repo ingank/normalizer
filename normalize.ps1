@@ -20,14 +20,6 @@ $soundFiles | ForEach-Object {
         # Read the file line by line
         $lines = Get-Content $ebur128File
 
-        # Initialize variables for the numeric values
-        $integrated = 0
-        $loudnessRange = 0
-        $averageDynamics = 0
-        $momentaryMax = 0
-        $shortTermMax = 0
-        $truePeakMax = 0
-
         # Parse each line and extract only the numeric values
         foreach ($line in $lines) {
             $parts = $line -split '='
